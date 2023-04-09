@@ -58,8 +58,26 @@ nav li{
    align-items: center;
 }
 
-header nav li a{
+._animation{
    color: #100f0f;
+   position:  relative;
+   padding-bottom: 5px;
+}
+
+._animation::before{
+   content: "";
+   position: absolute;
+   left: 0;
+   right: 0;
+   width: 0;
+   bottom: 0;
+   background-color: #0b30fe;
+   height: 2px;
+   transition: width ease-in-out 0.5s;
+}
+
+._animation:hover::before{
+   width: 50%;
 }
 
 header nav a:link{
@@ -68,7 +86,6 @@ header nav a:link{
 }
 
 header nav li:hover{
-   text-decoration: underline;
    transform: scale(1.1);
    color: blue;
 }
@@ -151,7 +168,7 @@ main h2{
 /* Acessar post (Main) */
 
 main ul li{
-   transition: 1s;
+   transition: 1.3s;
 }
 
 main ul li a{
@@ -232,7 +249,19 @@ footer section fieldset{
 form:hover{
    transform: scale(1.02);
    box-shadow: 3px -1px 59px -3px #000980;
+   background-color:#0a0909;
+   color: #ffffff;
 }
+
+form:hover input{
+   background-color: #0a0909;
+   border: #ffffff 1px solid;
+}
+
+form:hover input::placeholder{
+   color: #ffffff;
+}
+
 
 /* Input */
 
@@ -246,6 +275,7 @@ input{
 
 input::placeholder{
    padding-left: 11px;
+   
 }
 
 input:hover{
@@ -262,7 +292,7 @@ form button{
    
    border-radius: 10px;
    border: 1px solid #ffffff;
-   background-color: #000000;
+   background-color: #120e0e;
    color: #ffffff;
 
    transition: 1s;
@@ -272,6 +302,5 @@ form button{
 
 form button:hover{
    transform:scale(1.1);
-   box-shadow: 3px -1px 59px -3px rgba(255, 0, 0, 0.44); 
 }
 
